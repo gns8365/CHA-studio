@@ -2,185 +2,144 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <link rel="icon" href="favicon.png" type="image/png">
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Taehoon Studio</title>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-color: #00BCD4;
-      --accent-color: #26A69A;
-      --bg-color: #1C1C1C;
-      --text-color: #E0E0E0;
-      --dark-bg: #121212;
-      --dark-text: #e0e0e0;
+      --bg-color: #ffffff;
+      --text-color: #1f1f1f;
+      --accent-color: #2C3E50;
+      --highlight-color: #00BCD4;
+      --section-padding: 4rem;
     }
-
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    body {
       font-family: 'Pretendard', sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
-      transition: background-color 0.3s, color 0.3s;
+      line-height: 1.6;
     }
-
-    .dark-mode {
-      background-color: var(--dark-bg);
-      color: var(--dark-text);
-    }
-
     header {
-      background: linear-gradient(to right, var(--main-color), var(--accent-color));
+      background-color: var(--accent-color);
       color: white;
       padding: 2rem;
       text-align: center;
     }
-
     .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: var(--section-padding) 1rem;
     }
-
-    h1, h2 {
-      margin-top: 0;
+    h1, h2, h3 {
+      font-weight: 800;
+      margin-bottom: 1rem;
     }
-
-    .portfolio-item {
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid var(--highlight-color);
+      display: inline-block;
+      padding-bottom: 0.5rem;
       margin-bottom: 2rem;
     }
-
-    .portfolio-item a {
-      color: var(--accent-color);
+    .about, .portfolio, .services, .contact {
+      margin-bottom: var(--section-padding);
+    }
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .portfolio-item, .service-item {
+      margin-bottom: 2rem;
+    }
+    a {
+      color: var(--highlight-color);
       text-decoration: none;
     }
-
+    a:hover {
+      text-decoration: underline;
+    }
     footer {
       background-color: var(--accent-color);
       color: white;
       text-align: center;
-      padding: 1rem;
-    }
-
-    .contact a {
-      color: var(--accent-color);
-      text-decoration: underline;
-    }
-
-    .dark-mode .contact a {
-      color: #fff;
-    }
-
-    .toggle-btn {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      background: var(--accent-color);
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .about-container {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-
-    .profile-img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    .about-text {
-      max-width: 600px;
-    }
-
-    .workflow {
-      margin: 3rem 0;
-    }
-
-    .workflow ol {
-      padding-left: 1.5rem;
-      line-height: 1.8;
+      padding: 2rem 1rem;
     }
   </style>
 </head>
 <body>
-  
   <header>
     <h1>Taehoon Studio</h1>
-    <p>영상으로 사람들의 마음을 움직이는 Taehoon입니다</p>
+    <p>감각적인 영상미로 사람들의 마음을 움직이는 디자이너</p>
   </header>
-  <div class="container">
+
+  <main class="container">
     <section class="about">
       <h2>소개</h2>
-      <div class="about-container">
-        <img src="profile.jpg" alt="Taehoon" class="profile-img">
-        <div class="about-text">
-          <p>
-            안녕하세요, 감각적인 스토리텔링과<br>
-            세련된 영상미로 콘텐츠를 제작하는<br>
-            <strong>영상디자이너 차태훈</strong>입니다.<br><br>
-            브랜드 홍보영상, 유튜브 콘텐츠,<br>
-            교육용 영상 등 다양한 장르의 영상 편집과<br>
-            모션그래픽 작업을 진행해왔으며,<br>
-            보는 이의 눈과 마음을 사로잡는 영상을 만드는 것이<br>
-            저의 가장 큰 목표입니다.
-          </p>
-        </div>
+      <img src="profile.jpg" alt="프로필" class="profile-img">
+      <p>안녕하세요, 감각적인 스토리텔링과<br>세련된 영상미로 콘텐츠를 제작하는 <strong>영상디자이너 차태훈</strong>입니다.<br><br>
+      브랜드 홍보영상, 유튜브 콘텐츠, 교육용 영상 등 다양한 장르의 영상 편집과 모션그래픽 작업을 진행해왔으며,<br>
+      보는 이의 눈과 마음을 사로잡는 영상을 만드는 것이 저의 가장 큰 목표입니다.</p>
+    </section>
+
+    <section class="portfolio">
+      <h2>포트폴리오</h2>
+      <div class="portfolio-item">
+        <strong>콘텐츠페어 1분 스케치</strong><br>
+        <a href="http://naver.me/xt54bEjB" target="_blank">▶ 영상 보기</a>
+      </div>
+      <div class="portfolio-item">
+        <strong>한국로봇산업진흥원</strong><br>
+        <a href="https://naver.me/5SSRWeQF" target="_blank">▶ 영상 보기</a>
+      </div>
+      <div class="portfolio-item">
+        <strong>영어학원 홍보영상</strong><br>
+        <a href="https://naver.me/FswEliDd" target="_blank">▶ 영상 보기</a>
+      </div>
+      <div class="portfolio-item">
+        <strong>AIA생명</strong><br>
+        <a href="http://naver.me/55RPXpwI" target="_blank">▶ 영상 보기</a>
+      </div>
+      <div class="portfolio-item">
+        <strong>미술공방 인터뷰영상</strong><br>
+        <a href="https://www.instagram.com/reel/ClQIVq4IQUC/?igsh=MXhycTh4eWk0ZGt0ZQ==" target="_blank">▶ 영상 보기</a>
+      </div>
+      <div class="portfolio-item">
+        <strong>피카소가구 브이로그 유튜브(일부)</strong><br>
+        <a href="http://naver.me/x95zuW4n" target="_blank">▶ 영상 보기</a>
       </div>
     </section>
 
-    
-<h2>포트폴리오</h2>
-<div class="portfolio-item">
-  <strong>콘텐츠페어 1분 스케치</strong><br>
-  <a href="http://naver.me/xt54bEjB" target="_blank">▶ 영상 보기</a>
-</div>
-<div class="portfolio-item">
-  <strong>한국로봇산업진흥원</strong><br>
-  <a href="https://naver.me/5SSRWeQF" target="_blank">▶ 영상 보기</a>
-</div>
-<div class="portfolio-item">
-  <strong>영어학원 홍보영상</strong><br>
-  <a href="https://naver.me/FswEliDd" target="_blank">▶ 영상 보기</a>
-</div>
-<div class="portfolio-item">
-  <strong>AIA생명</strong><br>
-  <a href="http://naver.me/55RPXpwI" target="_blank">▶ 영상 보기</a>
-</div>
-<div class="portfolio-item">
-  <strong>미술공방 인터뷰영상</strong><br>
-  <a href="https://www.instagram.com/reel/ClQIVq4IQUC/?igsh=MXhycTh4eWk0ZGt0ZQ==" target="_blank">▶ 영상 보기</a>
-</div>
-<div class="portfolio-item">
-  <strong>피카소가구 브이로그 유튜브(일부)</strong><br>
-  <a href="http://naver.me/x95zuW4n" target="_blank">▶ 영상 보기</a>
-</div>
+    <section class="services">
+      <h2>제공 서비스 및 작업 방식</h2>
+      <img src="services.jpg" alt="영상편집 서비스 소개" style="max-width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+      <ol>
+        <li><strong>기획 이해:</strong> 클라이언트 니즈 파악 및 레퍼런스 확인</li>
+        <li><strong>컷 편집:</strong> 흐름에 맞는 컷 구성 및 스토리라인 편집</li>
+        <li><strong>자막 / 모션:</strong> 시각적 강조와 정보 전달을 위한 요소 삽입</li>
+        <li><strong>피드백 반영:</strong> 클라이언트 의견을 반영한 수정 진행</li>
+        <li><strong>최종 납품:</strong> 규격에 맞는 영상 파일 전달 및 마무리</li>
+      </ol>
+    </section>
 
-<section class="services">
-    <h2>제공 서비스</h2>
-    <p>아래 이미지를 통해 영상 편집 서비스 구성을 한눈에 확인하실 수 있습니다.</p>
-    <img src="services.jpg" alt="영상편집 서비스 소개" style="max-width: 100%; border-radius: 12px; margin-bottom: 2rem;">
-  </section>
+    <section class="contact">
+      <h2>연락하기</h2>
+      <p>이메일: <a href="mailto:gns8365@naver.com">gns8365@naver.com</a><br>
+      카카오톡: <a href="https://open.kakao.com/o/sto1ZeQf" target="_blank">오픈채팅 바로가기</a></p>
+    </section>
+  </main>
 
-    <h2>연락하기</h2>
-    <div class="contact">
-      이메일: <a href="mailto:gns8365@naver.com">gns8365@naver.com</a><br>
-      카카오톡: <a href="https://open.kakao.com/o/sto1ZeQf" target="_blank">오픈채팅 바로가기</a>
-    </div>
-  </div>
   <footer>
     © 2025 Taehoon Studio. All rights reserved.
   </footer>
-  
 </body>
 </html>
