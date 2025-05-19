@@ -4,15 +4,31 @@ body {
   font-family: 'Pretendard', sans-serif;
   scroll-behavior: smooth;
   background: #F6F6F6;
-  color: #1f1f1f;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.75rem 1rem;
+  z-index: 1000;
+}
+.navbar a {
+  color: #1B2B47;
+  text-decoration: none;
+  font-weight: bold;
 }
 .section {
-  padding: 4rem 1rem;
+  padding: 5rem 1rem 3rem;
   text-align: center;
 }
 .logo {
   max-height: 140px;
-  margin-top: 2rem;
+  margin-top: 6rem;
 }
 h1 {
   font-size: 2rem;
