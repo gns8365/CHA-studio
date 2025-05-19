@@ -1,0 +1,82 @@
+
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  scroll-behavior: smooth;
+  background: #F6F6F6;
+  color: #1f1f1f;
+}
+.section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.logo {
+  max-height: 140px;
+  margin-top: 2rem;
+}
+h1 {
+  font-size: 2rem;
+  margin: 1rem 0 0.5rem;
+}
+.tagline {
+  font-size: 1.1rem;
+  color: #333;
+}
+.navy { color: #1B2B47; font-weight: bold; }
+.beige { color: #C2A68A; font-weight: bold; }
+.intro-text {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.timeline li {
+  margin-bottom: 1.5rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+.card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card p {
+  padding: 0.8rem;
+  margin: 0;
+  font-weight: bold;
+}
+.float-btns {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.float-btns a {
+  background: #00BCD4;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-align: center;
+}
