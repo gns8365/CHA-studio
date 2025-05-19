@@ -2,107 +2,66 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Taehoon Studio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TEDIO - Taehoon Studio</title>
   <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Pretendard', sans-serif;
       margin: 0;
+      font-family: 'Pretendard', sans-serif;
       background: #F6F6F6;
       color: #1f1f1f;
     }
     header {
-      background-color: #F6F6F6; color: #1f1f1f;
-      color: #1f1f1f;
+      background-color: #F6F6F6;
+      padding: 2rem 1rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       text-align: center;
-      padding: 3rem 1rem;
     }
-    header h1 {
+    header img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+    .subtext h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
     }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 3rem 1rem;
+    .subtext h1 .blue {
+      color: #1B2B47;
+      font-weight: 700;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-      border-left: 5px solid #00BCD4;
-      padding-left: 1rem;
+    .subtext h1 .beige {
+      color: #C2A68A;
+      font-weight: 600;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #e0e0e0;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .card-content {
-      padding: 1rem;
-    }
-    .card-content h3 {
-      margin: 0 0 0.5rem;
-    }
-    .card-content p {
-      margin: 0;
+    .subtext p {
+      margin-top: 0.4rem;
       font-size: 0.95rem;
-      color: #555;
-    }
-    .card-content a {
-      display: inline-block;
-      margin-top: 0.8rem;
-      color: #00BCD4;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      background-color: #eee;
-      color: #555;
+      color: #333;
     }
   </style>
 </head>
 <body>
+  <header>
+    <img src="tedio-logo.png" alt="TEDIO Logo"/>
+    <div class="subtext">
+      <h1><span class="blue">Tae</span><span class="beige">hoon Studio</span></h1>
+      <p>영상으로 브랜드를 가장 잘 표현해주는 편집자</p>
+    </div>
+  </header>
 
-<header>
-  <h1>Taehoon Studio</h1>
-  <p>영상으로 브랜드를 가장 잘 표현해주는 편집자</p>
-</header>
-
-<div class="container">
-  <h2>포트폴리오</h2>
-  <div class="grid">
-    <div class="card"><img src="thumb1.png"><div class="card-content"><h3>콘텐츠페어</h3><p>전시 현장을 담은 감성 영상</p><a href="http://naver.me/xt54bEjB" target="_blank">▶ 보기</a></div></div>
-    <div class="card"><img src="thumb2.png"><div class="card-content"><h3>로봇산업진흥원</h3><p>기술과 사람을 잇는 다큐 스타일</p><a href="https://naver.me/5SSRWeQF" target="_blank">▶ 보기</a></div></div>
-    <div class="card"><img src="thumb3.png"><div class="card-content"><h3>영어학원</h3><p>신뢰를 주는 따뜻한 학원 영상</p><a href="https://naver.me/FswEliDd" target="_blank">▶ 보기</a></div></div>
-    <div class="card"><img src="thumb4.png"><div class="card-content"><h3>AIA생명</h3><p>가족 중심의 브랜드 캠페인</p><a href="http://naver.me/55RPXpwI" target="_blank">▶ 보기</a></div></div>
-    <div class="card"><img src="thumb5.png"><div class="card-content"><h3>미술공방</h3><p>예술가의 손끝을 담은 인터뷰</p><a href="https://www.instagram.com/reel/ClQIVq4IQUC/?igsh=MXhycTh4eWk0ZGt0ZQ==" target="_blank">▶ 보기</a></div></div>
-    <div class="card"><img src="thumb6.png"><div class="card-content"><h3>피카소가구</h3><p>현장감 있는 가구 브이로그</p><a href="http://naver.me/x95zuW4n" target="_blank">▶ 보기</a></div></div>
-  </div>
-</div>
-
-<footer>
-  © 2025 Taehoon Studio. All rights reserved.
-</footer>
-
+  <section class="intro" style="padding: 3rem 1rem; max-width: 720px; margin: auto;">
+    <h2 style="font-size: 1.5rem; border-left: 4px solid #00BCD4; padding-left: 1rem;">소개</h2>
+    <p style="line-height: 1.7; font-size: 1rem; margin-top: 1rem;">
+      안녕하세요, 저는 감각적인 스토리텔링과 영상미로 콘텐츠를 제작하는 영상디자이너 <strong>차태훈</strong>입니다.<br><br>
+      브랜드 홍보영상, 유튜브 콘텐츠, 교육용 영상 등 다양한 장르의 영상 편집과 모션그래픽 작업을 진행해왔으며,<br>
+      보는 이의 눈과 마음을 사로잡는 영상을 만드는 것이 저의 가장 큰 목표입니다.
+    </p>
+  </section>
 </body>
+
 </html>
