@@ -1,32 +1,23 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  let currentSection = 0;
   const sections = document.querySelectorAll(".section");
-  const totalSections = sections.length;
+  let current = 0;
 
-  function scrollToSection(index) {
+  function scrollTo(index) {
     const offset = index * window.innerHeight;
-    sections.forEach((section) => {
+    sections.forEach(section => {
       section.style.transform = `translateY(-${offset}px)`;
     });
   }
 
-  let isScrolling = false;
-
-  function handleWheel(event) {
-    if (isScrolling) return;
-    isScrolling = true;
-    if (event.deltaY > 0 && currentSection < totalSections - 1) {
-      currentSection++;
-    } else if (event.deltaY < 0 && currentSection > 0) {
-      currentSection--;
+  window.addEventListener("wheel", (e) => {
+    if (e.deltaY > 0 && current < sections.length - 1) {
+      current++;
+    } else if (e.deltaY < 0 && current > 0) {
+      current--;
     }
-    scrollToSection(currentSection);
-    setTimeout(() => {
-      isScrolling = false;
-    }, 800);
-  }
+    scrollTo(current);
+  });
 
-  window.addEventListener("wheel", handleWheel);
-  scrollToSection(currentSection); // 초기 정렬
+  scrollTo(current);
 });
